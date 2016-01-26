@@ -398,7 +398,7 @@ class Window_main(Window):
 				index_dbList = self.tabDBline[indexLine].combo_dbList.get_active()
 				for dbName in _DBLIST[modele_dbList[index_dbList][0]]:
 					pw=self.tools.getPass(dbName, modele_dbUser[index_dbUser][0])
-					self.oraTools[dbName] = OraTool.OraTool(modele_dbUser[index_dbUser][0], pw, dbName)
+					self.oraTools[dbName] = Database.Oracle(modele_dbUser[index_dbUser][0], pw, dbName)
 					self.oraTools[dbName].connect()
 				if self.oraTools[dbName].connected():
 					self.tabDBline[indexLine].but_connect.set_sensitive(False)
@@ -409,7 +409,7 @@ class Window_main(Window):
 					self.tabDBline[indexLine].but_disconnect.show()
 			else:
 				pw=self.tools.getPass(modele_db[index_db][0], modele_dbUser[index_dbUser][0])
-				self.oraTools[modele_db[index_db][0]] = OraTool.OraTool(modele_dbUser[index_dbUser][0], pw, modele_db[index_db][0])
+				self.oraTools[modele_db[index_db][0]] = Database.Oracle(modele_dbUser[index_dbUser][0], pw, modele_db[index_db][0])
 				self.oraTools[modele_db[index_db][0]].connect()
 				if self.oraTools[modele_db[index_db][0]].connected():
 					self.tabDBline[indexLine].but_connect.set_sensitive(False)
