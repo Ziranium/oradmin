@@ -1,6 +1,7 @@
-#! /usr/bin/python
-# Python Version: 2.7 - Platform: RedHat Enterprise Linux 5.10 64bits
-# Created by Jonathan LAMBERT - jlambert@sigma.fr - www.sigma.fr
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# Python Version: 2.6 - Platform: RedHat Enterprise Linux 5.10 64bits
+# Created by Jonathan LAMBERT - contact@jonathanlambert.info
 
 __author__ = "Jonathan LAMBERT"
 
@@ -29,8 +30,6 @@ class Tools:
 				return self.content.split(pattern)[1].strip().split(' ')[0]
 		raise Exception("Les informations d'authentification pour la base "+dbName+" ne sont pas disponible.")
 
-
-
 	def getUserDB(self, dbName):
 		try:
 			userList=[]
@@ -54,7 +53,6 @@ class Tools:
 				userListCommon=userListCommon.intersection(userList)
 		userListCommon=list(userListCommon)
 		return userListCommon
-
 		
 	def print_table(self,table):
 		aff = ""

@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+# Python Version: 2.6 - Platform: RedHat Enterprise Linux 5.10 64bits
+# Created by Jonathan LAMBERT - contact@jonathanlambert.info
 
 __author__ = "Jonathan LAMBERT"
 

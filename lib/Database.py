@@ -1,6 +1,7 @@
-#! /usr/bin/python
-# Python Version: 2.7 - Platform: RedHat Enterprise Linux 5.10 64bits
-# Created by Jonathan LAMBERT - jlambert@sigma.fr - www.sigma.fr
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# Python Version: 2.6 - Platform: RedHat Enterprise Linux 5.10 64bits
+# Created by Jonathan LAMBERT - contact@jonathanlambert.info
 
 __author__ = "Jonathan LAMBERT"
 

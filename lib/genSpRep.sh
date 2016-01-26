@@ -1,5 +1,5 @@
 #! /bin/bash
-# Created by Jonathan LAMBERT - jlambert@sigma.fr - www.sigma.fr
+# Created by Jonathan LAMBERT - contact@jonathanlambert.info
 
 display_usage() {
         echo -e "\nUsage:\n$0 [arguments] \n"
