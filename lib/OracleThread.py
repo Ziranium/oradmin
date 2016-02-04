@@ -24,7 +24,7 @@ class Thread (threading.Thread):
 			if not self.inputQueue.empty():
 				self.otool = self.inputQueue.get()
 				self.queueLock.release()
-				dictSingleElem = {self.otool.base : self.otool.execSelect(self.req, True)}
+				dictSingleElem = {self.otool.instance : self.otool.execSelect(self.req, True)}
 				self.outputQueue.put(dictSingleElem)
 				#print "thread "+str(self.threadID)+" termine : "+self.otool.base
 			else:

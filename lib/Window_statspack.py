@@ -471,7 +471,7 @@ class Window_statspack(Window):
 		for inst, checked in self.instanceList.iteritems():
 			if checked:
 				checkedInst=True
-				cmd = "../lib/genSpRep.sh -d "+inst+" -s "+str(beginTime[2])+str(beginTime[1])+str(beginTime[3])+str(beginTime[4])+" -e "+str(endTime[2])+str(endTime[1])+str(endTime[3])+str(endTime[4])+" -u "+self.oTool.user+" -p "+self.oTool.password
+				cmd = "../lib/genSpRep.sh -d "+inst+" -s "+str(beginTime[2])+str(beginTime[1])+str(beginTime[3])+str(beginTime[4])+" -e "+str(endTime[2])+str(endTime[1])+str(endTime[3])+str(endTime[4])+" -u "+self.oTool.user+" -p "+self.oTool.passwd
 				res = os.popen(cmd)
 				content = res.read()
 				reportList.append(content.split('End of Report ( ')[1].split(' )')[0])
@@ -480,7 +480,7 @@ class Window_statspack(Window):
 		if len(reportList) > 0:
 			# MAIL
 			self.tools=Tools.Tools()
-			self.tools.sendMailWithAttachment("jlambert@sigma.fr",mailList,"Statspack Report "+self.oTool.base, "Contenu en piece-jointe", reportList)
+			self.tools.sendMailWithAttachment("jlambert@sigma.fr",mailList,"Statspack Report "+self.oTool.instance, "Contenu en piece-jointe", reportList)
 			for report in reportList:
 				os.remove(report)
 			self.notif_dialog("\nStatspack-Info-Message:\nRapport(s) statspack envoyé(s) à "+", ".join(mailList))
